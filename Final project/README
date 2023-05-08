@@ -1,5 +1,9 @@
 the output_sample.csv is larger than 100MB
 if you want to run the code, follow below step.
-1.go to https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+1. go to https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 to download any of the Yellow Taxi Trip Records dataset
-2.use
+
+2. Use correlated.py in the data_process_correlated folder to transform the Parquet file to a CSV file, and it will show us the correlation between tip_amount and each other variable.
+
+3. Now we will have NY_sample.csv, we can use Linear regression, Bayes, random forest, and gradient boosting in model_jupyter fold to detect the model accuracy.
+

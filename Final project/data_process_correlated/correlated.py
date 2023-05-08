@@ -1,5 +1,4 @@
 import pandas as pd
-from sklearn.feature_selection import SelectKBest
 
 # load Parquet file
 df = pd.read_parquet('yellow_tripdata_2023-02.parquet')
