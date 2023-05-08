@@ -3,7 +3,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 #%%
-data = pd.read_csv('output_sample.csv')
+data = pd.read_csv('../output_sample.csv')
 
 print(data.columns)
 

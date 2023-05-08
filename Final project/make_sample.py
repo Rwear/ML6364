@@ -8,7 +8,7 @@ import pandas as pd
 def print_csv10(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-    chi = pd.read_csv('output.csv', nrows=500)
+    chi = pd.read_csv('../output.csv', nrows=500)
     print(chi)
     chi.to_csv('NY_sample_old.csv', index=False)
 
