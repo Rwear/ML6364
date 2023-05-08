@@ -1,8 +1,14 @@
 import pandas as pd
 from sklearn.feature_selection import SelectKBest
 
+# load Parquet file
+df = pd.read_parquet('yellow_tripdata_2023-02.parquet')
+#
+# # save as CSV
+df.to_csv('NY_sample.csv', index=False)
+
 # Load and merge datasets
-data = pd.read_csv('../NY_sample.csv')
+data = pd.read_csv('NY_sample.csv')
 
 # Convert to datetime and extract features
 data['tpep_pickup_datetime'] = pd.to_datetime(data['tpep_pickup_datetime'])
@@ -24,9 +30,3 @@ data = data.drop(['fare_amount', 'tolls_amount'], axis=1)
 # Correlation analysis
 correlations = data.corr()['tip_amount'].sort_values(ascending=False)
 print(correlations)
-
-# Feature selection using SelectKBest
-X = data.drop(columns=['tip_amount', 'tpep_pickup_datetime', 'tpep_dropoff_datetime'])
-y = data['tip_amount']
-k_best = SelectKBest
-print(k_best)
